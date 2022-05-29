@@ -15,11 +15,11 @@ BST<std::string> makeTree(const char* filename) {
         return Tree;
     }
     while(!file.eof()) {
-      ch = fin.get();
+      ch = file.get();
       if ((ch >= 'A') && (ch <= 'Z')) ch += 32;
       if ((ch >= 'a') && (ch <= 'z')) wrd += ch;
       else {
-        Tree.add(wrd);
+        Tree.Add(wrd);
         wrd = "";
       }
     }
